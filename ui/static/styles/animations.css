@@ -1,0 +1,89 @@
+/* Purple-themed animations for Sendra */
+
+/* Floating animation for images */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Gradient animation for backgrounds */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(156, 136, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(156, 136, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(156, 136, 255, 0);
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations */
+.hero-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+.send-img, .receive-img {
+    animation: float 4s ease-in-out infinite;
+}
+
+button {
+    animation: pulse 2s infinite;
+}
+
+.hero-container {
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.column-left, .column-right {
+    animation: fadeIn 1s ease-out;
+}
+
+.send-text, .rec-text {
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Hover effects */
+.hero-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.send-img:hover, .receive-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}

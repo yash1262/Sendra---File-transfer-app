@@ -1,38 +1,46 @@
 body {
-	background-color: hsl(0, 0%, 81%);
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	min-height: 100vh;
+	color: #ffffff;
 }
 /* Style the navbar */
 .navbar {
-	background-color: #ddaf94; /* White background */
+	background: linear-gradient(90deg, #a29bfe, #6c5ce7);
 	overflow: hidden;
 	text-align: right;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Style the logo */
 .logo {
 	float: left;
-	color: #333333;
+	color: #ffffff;
 	padding: 14px 16px;
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 /* Style the links inside the navbar */
 .navbar .menu a {
 	display: inline-block;
-	color: #333333;
+	color: #ffffff;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	transition: background-color 0.3s ease;
 }
 
 /* Change the color of links on hover */
 .navbar .menu a:hover {
-	background-color: #dddddd;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
 }
 
 /* Add a color to the active/current link */
 .navbar .menu .active {
-	background-color: #4caf50;
+	background-color: #5f3dc4;
 	color: white;
+	border-radius: 5px;
 }
 
 .receive-img {
@@ -45,4 +53,5 @@ body {
 
 .rec-text {
 	text-align: center;
+	color: #ffffff;
 }
