@@ -47,7 +47,11 @@
 						muted
 						loop
 						playsinline
+						poster="./static/images/main-image.png"
 						alt="File transfer demonstration">
+						<source src="./static/images/rec.mov" type="video/quicktime">
+						<!-- Fallback image if video fails to load -->
+						<img src="./static/images/main-image.png" alt="File transfer interface" class="hero-image">
 						Your browser does not support the video tag.
 					</video>
 
