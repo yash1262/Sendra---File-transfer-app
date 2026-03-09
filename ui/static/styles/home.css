@@ -69,15 +69,18 @@ body {
 .sendra {
 	font-size: 10rem;
 	font-weight: 700;
-	font-family: "Tangerine", cursive;
+	font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 	color: #FFA62B;
 	text-shadow: 3px 3px 6px rgba(46, 90, 167, 0.4);
+	letter-spacing: -0.02em;
 }
 
-.hero-image {
+.hero-image, .hero-video {
 	width: 473px;
 	height: 268px;
 	margin-bottom: 1rem;
+	border-radius: 15px;
+	box-shadow: 0 8px 25px rgba(46, 90, 167, 0.3);
 }
 
 .btt {

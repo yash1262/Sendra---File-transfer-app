@@ -51,36 +51,8 @@
     }
 }
 
-/* Wave animation for Mediterranean feel */
-@keyframes wave {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(14deg);
-    }
-    20% {
-        transform: rotate(-8deg);
-    }
-    30% {
-        transform: rotate(14deg);
-    }
-    40% {
-        transform: rotate(-4deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
 /* Apply animations */
-.hero-image {
+.hero-image, .hero-video {
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 4px 8px rgba(46, 90, 167, 0.3));
 }
@@ -112,12 +84,12 @@ body {
 }
 
 .sendra {
-    animation: wave 2s ease-in-out infinite;
-    transform-origin: 70% 70%;
+    /* Static professional title - no animations */
+    transform-origin: center;
 }
 
 /* Hover effects */
-.hero-image:hover {
+.hero-image:hover, .hero-video:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
     filter: drop-shadow(0 6px 12px rgba(46, 90, 167, 0.5));
