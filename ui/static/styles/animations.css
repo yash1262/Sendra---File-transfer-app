@@ -1,4 +1,4 @@
-/* Purple-themed animations for Sendra */
+/* Mediterranean-themed animations for Sendra */
 
 /* Floating animation for images */
 @keyframes float {
@@ -29,13 +29,13 @@
 /* Pulse animation for buttons */
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(156, 136, 255, 0.7);
+        box-shadow: 0 0 0 0 rgba(255, 166, 43, 0.7);
     }
     70% {
-        box-shadow: 0 0 0 10px rgba(156, 136, 255, 0);
+        box-shadow: 0 0 0 10px rgba(255, 166, 43, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(156, 136, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 166, 43, 0);
     }
 }
 
@@ -51,13 +51,43 @@
     }
 }
 
+/* Wave animation for Mediterranean feel */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 /* Apply animations */
 .hero-image {
     animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(46, 90, 167, 0.3));
 }
 
 .send-img, .receive-img {
     animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(255, 166, 43, 0.3));
 }
 
 button {
@@ -69,6 +99,10 @@ button {
     animation: gradientShift 15s ease infinite;
 }
 
+body {
+    animation: gradientShift 20s ease infinite;
+}
+
 .column-left, .column-right {
     animation: fadeIn 1s ease-out;
 }
@@ -77,13 +111,36 @@ button {
     animation: fadeIn 1.2s ease-out;
 }
 
+.sendra {
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: 70% 70%;
+}
+
 /* Hover effects */
 .hero-image:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+    filter: drop-shadow(0 6px 12px rgba(46, 90, 167, 0.5));
 }
 
 .send-img:hover, .receive-img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+    filter: drop-shadow(0 6px 12px rgba(255, 166, 43, 0.5));
+}
+
+/* Mediterranean glow effects */
+.navbar {
+    position: relative;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FFA62B, #F8E6A0, #86C5FF, #2E5AA7);
+    animation: gradientShift 8s ease infinite;
 }
