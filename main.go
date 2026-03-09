@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"os"
-	"swift/node"
+	"sendra/node"
 )
 
 func main() {

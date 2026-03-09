@@ -10,7 +10,7 @@ import (
 	"path"
 	"runtime"
 	"strings"
-	"swift/global"
+	"sendra/global"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -71,7 +71,7 @@ func (n *Node) handleFileReception(w http.ResponseWriter, r *http.Request) {
 	chunks := chi.URLParam(r, "totalChunks")
 	n.infoLog.Printf("incomming file: name:%+v chunkSize:%v  totalChunks:%v", fileName, chunkSize, chunks)
 
-	writeDir := global.CreateDirectoryIfNotExists("Documents/SwiftReceived")
+	writeDir := global.CreateDirectoryIfNotExists("Documents/SendraReceived")
 	tempFile, err := os.Create(path.Join(writeDir, fileName))
 	if err != nil {
 		n.errLog.Println(err)
@@ -104,7 +104,7 @@ func (n *Node) broadcast() {
 	for i := 0; i < 10; i++ {
 		for _, addr := range addrs {
 			go func(addr net.IP) {
-				sendMessage(addr, fmt.Sprintf("%s:%d", "swift", n.serverPort))
+				sendMessage(addr, fmt.Sprintf("%s:%d", "sendra", n.serverPort))
 			}(addr)
 		}
 		time.Sleep(time.Second)

@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	"swift/global"
+	"sendra/global"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -42,7 +42,7 @@ type Intro struct {
 func NewNode(infoLog *log.Logger, errLog *log.Logger) *Node {
 	hostname, err := os.Hostname()
 	if err != nil {
-		hostname = fmt.Sprintf("swift%d", rand.Intn(500))
+		hostname = fmt.Sprintf("sendra%d", rand.Intn(500))
 	}
 
 	return &Node{

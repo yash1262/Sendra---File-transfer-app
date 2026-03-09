@@ -1,9 +1,9 @@
 # Overview 👀
 
-The Swift application is designed to transfer files from one computer to another.  
+The Sendra application is designed to transfer files from one computer to another.  
 For android users, you could think of the application as "Xender for pcs" and for Iphone users, you could also think of this application as "Airdrop for pcs".
 
-## Why use Swift❓:
+## Why use Sendra❓:
 
 This application is meant to be a one size fits all when it comes to sending and receiving files.
 
@@ -14,11 +14,11 @@ While that may be easy to do for some, it may not be the case for all people, es
 
 ---
 
-The swift application allows said people to transfer files from one computer to another no matter the operating system they are on. All that is required is that the two are on the same wifi network (**technically speaking the same subnet**).
+The Sendra application allows said people to transfer files from one computer to another no matter the operating system they are on. All that is required is that the two are on the same wifi network (**technically speaking the same subnet**).
 
 # Architecture
 
--   The swift application as of now has only one major component in it called a node.
+-   The Sendra application as of now has only one major component in it called a node.
 -   A node can do one of two things at a time; send a file or receive a file
 -   A node has two components; the backend and the user interface (UI).
 -   The user interface of a node opens up in a browser while the backend starts up as a console application.
@@ -51,7 +51,7 @@ The swift application allows said people to transfer files from one computer to 
 -   For windows users, the OS might prompt you to allow or restrict access to public and private wifi networks. When this happens please allow both networks.
 -   Please allow the application permissions on your firewall
     -   note that for antivirus software which has a firewall you would need to allow the application to bypass the firewall else the other computer will not be able to connect.
--   In some cases, windows does not prompt the user to allow the app to use public or private networks; in this case the user will need to manually add inbound and outbound rules for the swift application.
+-   In some cases, windows does not prompt the user to allow the app to use public or private networks; in this case the user will need to manually add inbound and outbound rules for the Sendra application.
 
 # 🎯 Installation:
 

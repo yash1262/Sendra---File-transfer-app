@@ -1,4 +1,4 @@
-module swift
+module sendra
 
 go 1.20
 
