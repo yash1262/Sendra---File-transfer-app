@@ -75,12 +75,46 @@ body {
 	letter-spacing: -0.02em;
 }
 
-.hero-image, .hero-video {
+.hero-image {
 	width: 473px;
 	height: 268px;
 	margin-bottom: 1rem;
 	border-radius: 15px;
 	box-shadow: 0 8px 25px rgba(46, 90, 167, 0.3);
+	display: block;
+	object-fit: cover;
+}
+
+/* Video with absolutely no frame - completely transparent */
+.hero-video {
+	width: 473px;
+	height: 268px;
+	margin-bottom: 1rem;
+	display: block;
+	border: none !important;
+	background: transparent !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 0 !important;
+	margin: 0 0 1rem 0 !important;
+	opacity: 1;
+	mix-blend-mode: normal;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+/* Remove any default video styling */
+.hero-video::-webkit-media-controls {
+	display: none !important;
+}
+
+.hero-video::-webkit-media-controls-panel {
+	display: none !important;
+}
+
+.hero-video::-webkit-media-controls-start-playback-button {
+	display: none !important;
 }
 
 .btt {
